@@ -3,7 +3,7 @@ import { useMutation } from "@apollo/client";
 import styled from "styled-components";
 import heroImage from "../../images/hero_image.jpg";
 import { toast } from "react-toastify";
-import { PHONE_SIGN_IN } from "./AppQueries";
+import { PHONE_SIGN_IN } from "../../Routes/PhoneLogin/phoneQuires.Query";
 
 const Container = styled.div`
 	display: flex;

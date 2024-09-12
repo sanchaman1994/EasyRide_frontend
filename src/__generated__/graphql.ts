@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/core';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
@@ -426,3 +427,13 @@ export type Verification = {
   updatedAt?: Maybe<Scalars['String']['output']>;
   verified: Scalars['Boolean']['output'];
 };
+
+export type StartPhoneVerificationMutationVariables = Exact<{
+  phoneNumber: Scalars['String']['input'];
+}>;
+
+
+export type StartPhoneVerificationMutation = { __typename?: 'Mutation', StartPhoneVerification: { __typename?: 'StartPhoneVerificationResponse', ok: boolean, error?: string | null } };
+
+
+export const StartPhoneVerificationDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"startPhoneVerification"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"phoneNumber"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"StartPhoneVerification"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"phoneNumber"},"value":{"kind":"Variable","name":{"kind":"Name","value":"phoneNumber"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"ok"}},{"kind":"Field","name":{"kind":"Name","value":"error"}}]}}]}}]} as unknown as DocumentNode<StartPhoneVerificationMutation, StartPhoneVerificationMutationVariables>;
